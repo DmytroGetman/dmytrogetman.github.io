@@ -1,0 +1,27 @@
+html {
+  background-color: #f0f0f0;
+}
+
+a {
+  color: darkblue;
+  text-decoration: none;
+}
+
+h1 {
+   color: #333333;
+   text-align: left;
+}
+
+body {
+  max-width: 700px;
+  margin: 40px auto;
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  background-color: white;
+  padding: 40px;
+}
+
+h2 {
+  border-bottom: 2px solid darkblue;
+  padding-bottom: 5px;
+}
