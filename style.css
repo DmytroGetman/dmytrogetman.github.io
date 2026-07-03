@@ -25,3 +25,15 @@ h2 {
   border-bottom: 2px solid darkblue;
   padding-bottom: 5px;
 }
+
+@media print {
+  html {
+    background-color: white;
+  }
+
+  body {
+    max-width: none;
+    margin: 0;
+    padding: 0;
+  }
+}
