@@ -37,3 +37,21 @@ h2 {
     padding: 0;
   }
 }
+body.dark {
+  background-color: #1e1e1e;
+  color: #dddddd;
+}
+
+body.dark h1 {
+  color: #dddddd;
+  }
+html:has(body.dark) {
+  background-color: #121212;
+}
+body.dark a {
+  color: #7eb8ff;
+}
+body.dark h2 {
+  border-bottom: 2px solid #7eb8ff;
+}
+
