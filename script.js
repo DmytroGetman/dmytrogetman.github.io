@@ -2,7 +2,13 @@ const btn = document.getElementById("theme-btn");
 
 btn.addEventListener("click", function () {
   document.body.classList.toggle("dark");
-});
+
+  if (document.body.classList.contains("dark")) {
+  localStorage.setItem("theme", "dark");
+} else {
+  localStorage.setItem("theme", "light");
+}
+ });
 
 const settingsBtn = document.getElementById("settings-btn");
 const panel = document.getElementById("settings-panel");
@@ -10,6 +16,15 @@ const panel = document.getElementById("settings-panel");
 settingsBtn.addEventListener("click", function () {
   panel.classList.toggle("hidden");
 });
+
+const saved = localStorage.getItem("theme");
+
+ if (saved === "dark") {
+  document.body.classList.add("dark");
+ }
+
+
+
 
 const translations = {
   en: {
@@ -80,6 +95,7 @@ langBtn.addEventListener("click", function () {
   } else {
     currentLang = "en";
   }
+localStorage.setItem("lang", currentLang);
 
   const elements = document.querySelectorAll("[data-i18n]");
 
@@ -90,3 +106,8 @@ langBtn.addEventListener("click", function () {
 
   langBtn.textContent = currentLang === "en" ? "Українською" : "English";
 });
+
+const savedlang = localStorage.getItem("lang");
+  if (savedLang === "ua") {
+     currentLang = "ua";
+}
