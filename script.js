@@ -28,6 +28,7 @@ const saved = localStorage.getItem("theme");
 
 const translations = {
   en: {
+    name: "Dmytro Getman",
     profile: "Personal profile",
     right: "Right to work in Ireland",
     experience: "Work Experience",
@@ -53,9 +54,11 @@ const translations = {
     edu3Title: "Secondary School Education",
     avail1: "Available to start immediately",
     avail2: "Available for full-time or part-time work",
-    avail3: "Flexible with working hours"
+    avail3: "Flexible with working hours",
+    downloadBtn: "Download CV (PDF)"
   },
   ua: {
+    name: "Дмитро Гетьман",
     profile: "Про мене",
     right: "Право на роботу в Ірландії",
     experience: "Досвід роботи",
@@ -81,7 +84,8 @@ const translations = {
     edu3Title: "Середня освіта",
     avail1: "Готовий розпочати роботу негайно",
     avail2: "Готовий до роботи на повний або неповний робочий день",
-    avail3: "Гнучкий графік роботи"
+    avail3: "Гнучкий графік роботи",
+    downloadBtn: "Download CV (PDF) Англійською"
   }
 };
 
