@@ -113,9 +113,22 @@ body.dark #settings-panel {
     padding-right: 30px;
   }  
   h1 {
-    font-size: 26px;
+    font-size: 24px;
   }
   h2 {
-    font-size: 20px;
+    font-size: 19px;
+  }
+  h3 {
+    font-size: 17px;
+  }
+  p {
+    font-size: 15px;
+  } 
+  ul {
+     padding-left: 20px;
+  }
+  li {
+    padding-left: 5px;
+    font-size: 15px;
   }
 }
