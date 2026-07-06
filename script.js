@@ -87,6 +87,16 @@ const translations = {
 
 let currentLang = "en";
 
+function updateLanguage() {
+  const elements = document.querySelectorAll("[data-i18n]");
+  elements.forEach(function (el) {
+    const key = el.getAttribute("data-i18n");
+    el.textContent = translations[currentLang][key];
+  });
+
+  langBtn.textContent = currentLang === "en" ? "Українською" : "English";
+}
+
 const langBtn = document.getElementById("lang-btn");
 
 langBtn.addEventListener("click", function () {
@@ -95,19 +105,13 @@ langBtn.addEventListener("click", function () {
   } else {
     currentLang = "en";
   }
-localStorage.setItem("lang", currentLang);
-
-  const elements = document.querySelectorAll("[data-i18n]");
-
-  elements.forEach(function (el) {
-    const key = el.getAttribute("data-i18n");
-    el.textContent = translations[currentLang][key];
-  });
-
-  langBtn.textContent = currentLang === "en" ? "Українською" : "English";
+  localStorage.setItem("lang", currentLang);
+  updateLanguage();
 });
 
-const savedlang = localStorage.getItem("lang");
+
+const savedLang = localStorage.getItem("lang");
   if (savedLang === "ua") {
      currentLang = "ua";
+     updateLanguage();
 }
